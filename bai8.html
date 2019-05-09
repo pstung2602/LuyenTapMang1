@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input id="nhapso"/>
+<input id="add" value="add" onclick="add()" type="button" />
+<input id="display" value="display" onclick="display()" type="button"/>
+<div id="mang"></div>
+<div id="tangdan"></div>
+<div id="giamdan"></div>
+<body>
+<script>
+    let arr=[];
+    let x=0;
+    function add() {
+        arr[x]=document.getElementById("nhapso").value;
+        x++;
+        document.getElementById("nhapso").value="";
+
+    }
+    function display() {
+        document.getElementById("mang").innerHTML=arr;
+        let e=arr.sort();
+        document.getElementById("tangdan").innerHTML=e;
+        let f=e.reverse();
+        document.getElementById("giamdan").innerHTML=f;
+
+
+
+    }
+</script>
+
+</body>
+</html>

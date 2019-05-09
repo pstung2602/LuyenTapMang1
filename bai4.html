@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="demo" />
+<input id="add" onclick="add()" type="button" value="add"/>
+<input id="display" onclick="display()" type="button" value="display"/>
+<div id="mang"></div>
+<div id="KQ"></div>
+<script>
+    let arr=[];
+    let x=0;
+    function add() {
+        arr[x]=document.getElementById("demo").value;
+        x++;
+        document.getElementById("demo").value="";
+    }
+    function display() {
+        document.getElementById("mang").innerHTML="Mảng nhập vào: "+arr;
+        let e="<hr/>";
+        e="Đảo ngược mảng: "+arr.reverse();
+        document.getElementById("KQ").innerHTML=e;
+
+
+    }
+</script>
+
+</body>
+</html>
